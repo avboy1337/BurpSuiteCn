@@ -1,2 +1,44 @@
-<h2 style="word-wrap: break-word;margin-top: 24px;margin-bottom: 16px;padding-bottom: 0.3em;font-size: 1.5em;line-height: 1.25;box-sizing: border-box;font-weight: 600;border-bottom: 1px solid rgb(234, 236, 239);color: rgb(36, 41, 46);white-space: normal;background-color: rgb(255, 255, 255);"><span style="font-size: 17px;">0x0 介绍</span></h2><p style="word-wrap: break-word;margin-bottom: 16px;line-height: normal;box-sizing: border-box;color: rgb(36, 41, 46);text-align: left;white-space: normal;background-color: rgb(255, 255, 255);">Burp Suite 是用于攻击web 应用程序的集成平台，包含了许多神器。Burp Suite为这些工具设计了许多接口，以加快攻击应用程序的过程。所有工具都共享一个请求，并能处理对应的HTTP 消息、持久性、认证、代理、日志、警报。为什么要汉化？做为一个半路出家英语不好的人时常不认识某些单词而烦恼，现在终于由<span style="color: rgb(51, 51, 51);font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;font-size: 17px;text-align: justify;">凌天安全实验室的小伙伴汉化了这个渗透测试中的“大杀器”！</span></p><h2 style="word-wrap: break-word;margin-top: 24px;margin-bottom: 16px;padding-bottom: 0.3em;font-size: 1.5em;line-height: 1.25;box-sizing: border-box;font-weight: 600;border-bottom: 1px solid rgb(234, 236, 239);color: rgb(36, 41, 46);white-space: normal;background-color: rgb(255, 255, 255);"><span style="font-size: 17px;">0x1 使用方法</span></h2><p style="word-wrap: break-word;margin-bottom: 16px;line-height: normal;box-sizing: border-box;color: rgb(36, 41, 46);text-align: left;white-space: normal;background-color: rgb(255, 255, 255);">早期我司大牛就已经提出来，javaagent技术，该技术应用很广这里是是小试牛刀，JavaAgent 是运行在 main方法之前的拦截器，它内定的方法名叫 premain ，也就是说先执行 premain 方法然后再执行 main 方法。用处都明白了吧。具体代码可以反编译jar包。 这里只是用提前翻译好的文本替换了burp内的字节码内容。按道理所有burp都能使用本工具，但是我只测试1.7.X～2.X的版本防止有部分人爱钻牛角尖，所以你懂得。欢迎各路大佬测试是否有后门。</p><h3 style="word-wrap: break-word;margin-top: 24px;margin-bottom: 16px;font-size: 1.25em;line-height: 1.25;box-sizing: border-box;background: rgb(255, 255, 255);border-top: 3px solid rgb(153, 153, 153);font-weight: 600;color: rgb(36, 41, 46);white-space: normal;padding-left: 15px !important;"><span style="font-size: 17px;">Linux Mac 下加载 burp-loader-keygen.jar</span></h3><pre style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(36, 41, 46);font-size: 16px;text-align: left;background-color: rgb(255, 255, 255);"><code class="hljs nginx" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;display: block;overflow-x: auto;padding: 0.5em;white-space: pre-wrap;background: rgb(35, 36, 31) !important;color: rgb(248, 248, 242) !important;"><span class="hljs-attribute" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(102, 217, 239);">java</span> -javaagent:BurpSuiteCn.jar -Xbootclasspath/p:burp-loader-keygen.jar &nbsp;-Xmx1024m -jar burpsuite_pro_v1.x.x.jar</code></pre><h3 style="word-wrap: break-word;margin-top: 24px;margin-bottom: 16px;font-size: 1.25em;line-height: 1.25;box-sizing: border-box;background: rgb(255, 255, 255);border-top: 3px solid rgb(153, 153, 153);font-weight: 600;color: rgb(36, 41, 46);white-space: normal;padding-left: 15px !important;"><span style="font-size: 17px;">Windwos 下加载 burp-loader-keygen.jar</span></h3><blockquote style="word-wrap: break-word;line-height: normal;box-sizing: border-box;margin-bottom: 16px;padding-right: 1em;padding-left: 1em;color: rgb(106, 115, 125);border-left-width: 0.25em;border-left-color: rgb(223, 226, 229);text-align: left;white-space: normal;background-color: rgb(255, 255, 255);"><p style="word-wrap: break-word;line-height: normal;box-sizing: border-box;">需要指定编码否则会乱码！！！</p></blockquote><pre style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(36, 41, 46);font-size: 16px;text-align: left;background-color: rgb(255, 255, 255);"><code class="hljs nginx" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;display: block;overflow-x: auto;padding: 0.5em;white-space: pre-wrap;background: rgb(35, 36, 31) !important;color: rgb(248, 248, 242) !important;"><span class="hljs-attribute" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(102, 217, 239);">java</span> -Dfile.encoding=utf-<span class="hljs-number" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(174, 129, 255);">8</span> -javaagent:BurpSuiteCn.jar -Xbootclasspath/p:burp-loader-keygen.jar &nbsp;-Xmx1024m -jar burpsuite_pro_v1.x.x.jar</code></pre><h3 style="word-wrap: break-word;margin-top: 24px;margin-bottom: 16px;font-size: 1.25em;line-height: 1.25;box-sizing: border-box;background: rgb(255, 255, 255);border-top: 3px solid rgb(153, 153, 153);font-weight: 600;color: rgb(36, 41, 46);white-space: normal;padding-left: 15px !important;"><span style="font-size: 17px;">自定义翻译规则</span></h3><blockquote style="word-wrap: break-word;line-height: normal;box-sizing: border-box;margin-bottom: 16px;padding-right: 1em;padding-left: 1em;color: rgb(106, 115, 125);border-left-width: 0.25em;border-left-color: rgb(223, 226, 229);text-align: left;white-space: normal;background-color: rgb(255, 255, 255);"><p style="word-wrap: break-word;line-height: normal;box-sizing: border-box;">包内自带翻译包。 在同目录下新建cn.txt写入一下内容如： 注意一下 \t 是分割符， 左边是需要匹配的 右边是替换的 支持正则表达式。</p></blockquote><pre style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(36, 41, 46);font-size: 16px;text-align: left;background-color: rgb(255, 255, 255);"><code class="hljs nginx" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;display: block;overflow-x: auto;padding: 0.5em;white-space: pre-wrap;background: rgb(35, 36, 31) !important;color: rgb(248, 248, 242) !important;"><span class="hljs-attribute" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(102, 217, 239);">Proxy</span> \t 代理 
-The analysis is based <span class="hljs-literal" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(174, 129, 255);">on</span> a sample of ([<span class="hljs-number" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(174, 129, 255);">0</span>-<span class="hljs-number" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(174, 129, 255);">9</span>]+) tokens?. Based <span class="hljs-literal" style="word-wrap: break-word;line-height: normal;box-sizing: border-box;color: rgb(174, 129, 255);">on</span> the sample size, the reliability of the results is: (.*) <span style="font-size: 18px;"><strong style="font-size: 18px;white-space: normal;">
+# Burp Pro 2020 1~9汉化优化国庆来袭
+
+**本项目只是为了兴趣爱好学习交流，任何人不得将其有用的非法用途以及盈利等目的，否则必然要承担承担追究其相关责任！**
+
+## 0x01 说明
+很多朋友发邮箱和git issues方式向我提出，最新版本啥时候来，本着有一个人用就去更新和奉献的原则，正版本工具还是有一点点用，不过某些英文大佬就不要用了，下都不别下，怕脏了您的电脑。之前也说过不接受任何翻译上的反驳。(**急需懂安全的翻译小能手,本人小学毕业英文不过关。**)
+奔着不要脸的原则贴上打赏二维码！！！
+![]()
+## 0x02 唯一git开源地址
+商业使用请购买正版：[https://portswigger.net/burp](https://portswigger.net/burp)
+穷逼请使用开心版：[https://www.ddosi.com/](https://w.ddosi.workers.dev/%E9%9B%A8%E8%8B%81%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/burp/)
+出现多个根据本项目Loader的修改版本，请自行甄别使用，出现问题，本项目概不负责！再三考虑不开源源码，防止部分不法分子，钻空子，虽然也没几行，但是也表明我们斗争的决心。
+
+[https://github.com/hackxx/BurpSuiteCn](https://github.com/hackxx/BurpSuiteCn)
+下载地址：[https://github.com/hackxx/BurpSuiteCn/releases/tag/V2.0](https://github.com/hackxx/BurpSuiteCn/releases/tag/V2.0)
+
+## 0x03 更新功能点
+本次增加开心功能(你懂的！)
+开心版，代码用的 [Hywell && x-Ai](https://github.com/x-Ai/BurpSuiteLoader)感谢二位大佬的付出。
+汉化版本借用翻译体，借用了部分[refengs](https://github.com/refengs/BurpSuiteCn-myself) 的翻译体，感觉超棒很赞~~~
+修复好多个翻译上的bug，比如Send to intruder 按钮失效
+等等bug。具体我自己数不清
+
+
+## 0x04 使用方法
+
+    java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:BurpSuiteCn.jar  -noverify -jar burpsuite_pro_v2020.9.1.jar
+
+Burp 2020.9.1测试可用。
+另外附上大拿burp地址：[https://github.com/Prodject/BurpSuite-collections](https://github.com/Prodject/BurpSuite-collections)感谢
+
+## 0x05 截图
+![](leanote://file/getImage?fileId=5f7b4d903801141c76000001)
+![](leanote://file/getImage?fileId=5f7b4dd73801141c76000002)
+![](leanote://file/getImage?fileId=5f7b4df83801141c76000003)
+
+
+## 0x06 结尾以及感谢
+工具有任何bug或者翻译上有什么缺陷可以提issues。
+感谢：[https://github.com/x-Ai/BurpSuiteLoader](https://github.com/x-Ai/BurpSuiteLoader)
+[https://github.com/Prodject/BurpSuite-collections](https://github.com/Prodject/BurpSuite-collections)
+
+Bug：发送intruder有问题！！！
+
