@@ -18,7 +18,7 @@
 本次增加开心功能(你懂的！)
 开心版，代码用的 [Hywell && x-Ai](https://github.com/x-Ai/BurpSuiteLoader)感谢二位大佬的付出。
 汉化版本借用翻译体，借用了部分[refengs](https://github.com/refengs/BurpSuiteCn-myself) 的翻译体，感觉超棒很赞~~~
-修复好多个翻译上的bug，比如Send to intruder 按钮失效
+修复好多个翻译上的bug。
 等等bug。具体我自己数不清
 
 
