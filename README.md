@@ -4,8 +4,6 @@
 
 ## 0x01 说明
 很多朋友发邮箱和git issues方式向我提出，最新版本啥时候来，本着有一个人用就去更新和奉献的原则，正版本工具还是有一点点用，不过某些英文大佬就不要用了，下都不别下，怕脏了您的电脑。之前也说过不接受任何翻译上的反驳。(**急需懂安全的翻译小能手,本人小学毕业英文不过关。**)
-奔着不要脸的原则贴上打赏二维码！！！
-![](https://github.com/hackxx/BurpSuiteCn/blob/master/screenshot/zhanshang.png)
 ## 0x02 唯一git开源地址
 商业使用请购买正版：[https://portswigger.net/burp](https://portswigger.net/burp)
 穷逼请使用开心版：[https://www.ddosi.com/](https://w.ddosi.workers.dev/%E9%9B%A8%E8%8B%81%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/burp/)
